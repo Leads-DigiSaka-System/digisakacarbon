@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- World Map Simplified Outline -->
+    <path d="M40 100 C40 80 60 70 80 70 C100 70 120 80 140 90 C160 100 180 110 160 120 C140 130 120 140 100 140 C80 140 60 130 40 120 Z" stroke="#228B22" stroke-width="4" fill="none"/>
+    <!-- Export Arrows -->
+    <path d="M100 50 L130 30 M130 30 L140 40 M130 30 L120 40" stroke="#FFB300" stroke-width="4"/>
+    <path d="M160 90 L190 70 M190 70 L200 80 M190 70 L180 80" stroke="#FFB300" stroke-width="4"/>
+    <path d="M120 140 L150 160 M150 160 L160 150 M150 160 L140 170" stroke="#FFB300" stroke-width="4"/>
+    <!-- Text -->
+    <text x="100" y="180" font-family="Arial" font-size="16" fill="#228B22" text-anchor="middle" font-weight="bold">EXPORT MARKETS</text>
+</svg>

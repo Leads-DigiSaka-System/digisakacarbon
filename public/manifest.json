@@ -1,0 +1,21 @@
+{
+  "name": "Digisaka Carbon - GHG Emission Monitoring Platform",
+  "short_name": "Digisaka Carbon",
+  "description": "Leading platform for greenhouse gas emission monitoring, carbon credit management, and climate-smart agriculture solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "/images/digisakaweb.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/digisakaweb.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
