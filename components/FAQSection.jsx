@@ -50,42 +50,32 @@ const FAQSection = () => {
       answer:
         "We take data security seriously. Our platform employs enterprise-grade encryption, secure cloud storage, and regular security audits. All data is backed up regularly, and we comply with international data protection standards to ensure your information remains confidential and secure.",
     },
-      {
-        question: "What is this project and what problem does it solve?",
-        answer:
-          "This is a low-cost, field-deployable methane (CH\u2084) monitoring system designed for agricultural applications under LEADS AGRI. It continuously measures methane concentration in the field, timestamps data with logs environmental context (temperature, humidity) all from a solar-powered, autonomous unit that can be deployed with minimal infrastructure.",
-      },
-      {
-        question: "What is the target of deployment environment?",
-        answer:
-          "Outdoor agricultural fields in the Philippine climate \u2014 hot, humid, and often without grid power access. The system is designed to operate continuously using a solar panel with a LiFePO4 battery, making it fully off-grid capable.",
-      },
-      {
-        question: "What methane sensor is used and why?",
-        answer:
-          "The Figaro TGS2611-E00 is used. It's a catalytic-type MEMS gas sensor specifically tuned for methane detection. Key reasons for selection:\n\u2022 Low cost compared to NDIR or laser-based alternatives\n\u2022 The -E00 variant includes an ethanol filter, reducing false positives from alcohol vapors common in agricultural settings\n\u2022 Well-documented sensitivity curves for CH\u2084 calibration\n\u2022 Outputs an analog voltage, compatible with an external ADC",
-      },
-      {
-        question: "How does the system stay powered in the field?",
-        answer:
-          "A solar panel charges a 12V LiFePO4 battery through a charge controller. LiFePO4 chemistry is chosen for its long cycle life, flat discharge curve, and thermal stability \u2014 important in high-ambient-temperature Philippine field conditions. The power chain then steps this down through the LM2596 buck converter and HT7550 LDO to a stable 5V for the electronics.",
-      },
-      {
-        question: "What PCB design features were added for reliability?",
-        answer:
-          "Added features in PCB to ensure the reliability are:\n\u2022 GND stitching vias \u2014 Added across the board to reduce ground plane impedance and improve EMI shielding\n\u2022 Copper pour \u2014 Solid ground fill on both layers for better thermal and electrical performance\n\u2022 No-connect markers \u2014 Added to all unused pins to suppress false DRC errors\n\u2022 Part value verification \u2014 Confirmed all resistor/capacitor values match BOM intent.",
-      },
-      {
-        question: "How is data collected and stored?",
-        answer:
-          "The Raspberry Pi Zero runs a Python data-logging loop that reads methane (via ADS1115), temperature and humidity (SI7021), and timestamps each reading using the DS3231 RTC. Data is written to local storage (SD card). The DS3231's battery-backed oscillator ensures timestamps remain accurate even after power interruptions critical for field deployments where power cycling may occur.",
-      },
-      {
-        question: "What is the full component list?",
-        answer:
-          "The IoT-Based: Low-Cost Methane Sensor includes:\n\u2022 MCU Raspberry Pi Zero \u2014 runs Python firmware\n\u2022 Sensor TGS2611-E00 \u2014 methane detection\n\u2022 Sensor SI7021 \u2014 temperature & humidity (I2C)\n\u2022 ADC ADS1115 \u2014 16-bit, 4-channel analog-to-digital converter (I2C)\n\u2022 RTC DS3231 \u2014 precision real-time clock (I2C)\n\u2022 Power 12V LiFePO4 battery + 100W Solar Panel + Charge Controller\n\u2022 Power LM2596 buck converter (12V \u2192 ~5.5V)\n\u2022 Power HT7550 LDO (\u2192 stable 5V for RPi)\n\u2022 Power TL431 shunt reference for ADC voltage reference\n\u2022 Logic BSS138 MOSFET \u2014 I2C level shifting (5V \u2194 3.3V)\n\u2022 Wiring 10AWG cable for battery connections",
-      },
-    ];
+    {
+      question: "What is this system for?",
+      answer:
+        "A low-cost, field-deployable system for measuring methane (CH\u2084) in applications like agriculture, environmental monitoring, and carbon projects (MRV).",
+    },
+    {
+      question: "What sensor does it use?",
+      answer:
+        "It uses a Figaro TGS2611 methane sensor, chosen for its low cost, availability, and suitability for ppm-level detection.",
+    },
+    {
+      question: "How accurate is the system?",
+      answer:
+        "\u2022 Raw readings are not directly accurate\n\u2022 With proper calibration: ~0.5\u20131 ppm accuracy\n\u2022 Accuracy depends on calibration and environmental conditions",
+    },
+    {
+      question: "What are its limitations?",
+      answer:
+        "\u2022 Sensitive to humidity, temperature, and other gases\n\u2022 Requires periodic calibration\n\u2022 Lower accuracy than laboratory instruments",
+    },
+    {
+      question: "How is measurement reliability ensured?",
+      answer:
+        "\u2022 Controlled airflow\n\u2022 Temperature and humidity monitoring and control\n\u2022 Closed chamber for consistent sampling\n\u2022 Standard gas calibration",
+    },
+  ];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-white via-[#FFF8E1]/40 to-[#81C784]/15 overflow-hidden">
