@@ -11,12 +11,12 @@ const Footer = () => {
       name: "SEARCA",
       className: "",
     },
-    {
-      src: "/images/IRRI.svg",
-      alt: "IRRI",
-      name: "IRRI",
-      className: "",
-    },
+    // {
+    //   src: "/images/IRRI.svg",
+    //   alt: "IRRI",
+    //   name: "IRRI",
+    //   className: "",
+    // },
     {
       src: "/images/sojitz.svg",
       alt: "Sojitz",
