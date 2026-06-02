@@ -44,29 +44,7 @@ const Partnership = () => {
       ],
       gradient: "from-forest-green via-light-green to-dark-green",
       orderFirst: true,
-    },
-    // {
-    //   id: "irri",
-    //   name: "IRRI Partnership",
-    //   logo: "/images/IRRI.svg",
-    //   image: "/images/IRRI-partnership.jpg",
-    //   items: [
-    //     {
-    //       text: "Calibration of methane emission sensors for accurate greenhouse gas monitoring",
-    //       icon: FlaskRound,
-    //     },
-    //     {
-    //       text: "Field validation of sensor-based emissions tracking methodologies",
-    //       icon: Target,
-    //     },
-    //     {
-    //       text: "Integration of advanced sensor technologies to support climate-resilient agriculture",
-    //       icon: MonitorDot,
-    //     },
-    //   ],
-    //   gradient: "from-golden-yellow via-yellow-400 to-yellow-500",
-    //   orderFirst: false,
-    // },
+    }
   ]);
 
   // Carousel images state
